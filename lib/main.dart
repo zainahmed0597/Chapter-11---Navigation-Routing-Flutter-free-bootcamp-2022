@@ -1,3 +1,5 @@
+import 'package:chapter11_navigation_routing/screen_three.dart';
+import 'package:chapter11_navigation_routing/screen_two.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -15,9 +17,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Chapter 11',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue, 
       ),
-      home: MyHomePage(),
+      initialRoute: HomeScreen.id,
+      routes: {
+        HomeScreen.id : (context) => HomeScreen(),
+        ScreenTwo.id : (context) => ScreenTwo(),
+        ScreenThree.id : (context) => ScreenThree(name: '', number: 1),
+      },
     );
   }
 }

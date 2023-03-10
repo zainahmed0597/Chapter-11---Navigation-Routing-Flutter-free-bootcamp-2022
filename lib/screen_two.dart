@@ -2,12 +2,8 @@ import 'package:chapter11_navigation_routing/screen_three.dart';
 import 'package:flutter/material.dart';
 
 class ScreenTwo extends StatefulWidget {
-  final String name;
-  final int num;
-
+  static const String id = 'screen_two';
   const ScreenTwo({Key? key,
-    required this.name,
-    this.num = 2,
   }) : super(key: key);
 
   @override
@@ -17,9 +13,10 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
+    final arguments = ModalRoute.of(context)!.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.name + " " + widget.num.toString()),
+          title: Text(arguments['name']),
           centerTitle: true),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -30,9 +27,9 @@ class _ScreenTwoState extends State<ScreenTwo> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenThree(
-                      name: widget.name,
-                      number: widget.num,
+                    MaterialPageRoute(builder: (context) => const ScreenThree(
+                      name: 'Asif Taj',
+                      number: 25,
                     )));
               },
               child: Container(

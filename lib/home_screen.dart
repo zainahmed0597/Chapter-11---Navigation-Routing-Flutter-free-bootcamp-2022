@@ -1,14 +1,16 @@
 import 'package:chapter11_navigation_routing/screen_two.dart';
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  static const String id = 'home_screen';
+
+  const HomeScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +26,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScreenTwo(
-                      name: "Asif Taj",
-                      num: 12,
-                    )));
+                // Navigator.push(context,MaterialPageRoute(builder: (context) => ScreenTwo(name: "Asif Taj",num: 12,)));
+                Navigator.pushNamed(context, ScreenTwo.id,
+                    arguments: {'name': 'Asif Taj', 'age': 25});
               },
               child: Container(
                 height: 50,

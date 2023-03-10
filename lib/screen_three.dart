@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatefulWidget {
+  static const String id = 'screen_three';
+
   final String name;
   final int number;
 
