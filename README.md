@@ -1,9 +1,8 @@
-# chapter11_navigation_routing
-
-Chapter 11 Navigation Routing
-https://youtu.be/Ctu1Tef9jIg
+# Chapter11 Navigation Routing
 
 ## Getting Started
+Chapter 11 - Navigation & Routing || Flutter free bootcamp 2022
+https://youtu.be/Ctu1Tef9jIg
 
 This project is a starting point for a Flutter application.
 
