@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatefulWidget {
-  static const String id = 'screen_three';
-
-  final String name;
-  final int number;
-
-  const ScreenThree({Key? key,
-    required this.name,
-    required this.number,
-  }) : super(key: key);
+  const ScreenThree({Key? key}) : super(key: key);
 
   @override
   State<ScreenThree> createState() => _ScreenThreeState();
@@ -41,8 +33,10 @@ class _ScreenThreeState extends State<ScreenThree> {
                 ),
               ),
             ),
-            SizedBox(height: 12,),
-            Text(widget.name + " " + widget.number.toString()),
+            SizedBox(
+              height: 12,
+            ),
+            Text("Test 1"),
           ],
         ),
       ),
